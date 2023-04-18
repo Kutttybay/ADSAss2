@@ -101,7 +101,10 @@ public class MyArrayList implements MyList{
 
     @Override
     public Object get(int index) {
-        return null;
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+        return arr[index];
     }
 
     @Override

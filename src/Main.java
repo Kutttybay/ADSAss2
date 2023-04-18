@@ -14,6 +14,7 @@ public class Main {
         arrayList.add(2515);
         arrayList.add(32);
 
+        System.out.println(arrayList.get(4));
         System.out.println(arrayList.size());
 
         // LinkedList
