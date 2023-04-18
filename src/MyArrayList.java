@@ -12,13 +12,19 @@ public class MyArrayList implements MyList{
         return size;
     }
 
+    /*
+    * This method checks all objects of list
+    * if code find object it returns true
+    * if not return false
+    */
     @Override
     public boolean contains(Object o) {
         for (int i = 0; i < size; i++){
             if (arr[i].equals(0)){
-                return
+                return true;
             }
         }
+        return  false;
     }
 
     @Override
