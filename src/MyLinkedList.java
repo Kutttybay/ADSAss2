@@ -1,6 +1,6 @@
 import org.w3c.dom.Node;
 
-public class MyLinkedList<T> implements MyList<T> {
+public class MyLinkedList implements MyList {
 
     private static class Node {
         Object data;
@@ -27,7 +27,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -37,7 +37,15 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(Object item) {
+        if (head == null){
+            head = new Node((Object) item);
+        }
+        else {
+            Node curr = head;
+            while (curr.next != null){
 
+            }
+        }
     }
 
     @Override
