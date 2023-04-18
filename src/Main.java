@@ -17,7 +17,7 @@ public class Main {
         System.out.println(arrayList.get(4));
         System.out.println(arrayList.size());
 
-        arrayList.remove(25);
+        arrayList.remove((Object) 25);
 
         System.out.println(arrayList.size());
         System.out.println(arrayList.get(3));
