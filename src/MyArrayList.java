@@ -14,12 +14,26 @@ public class MyArrayList implements MyList{
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        for (int i = 0; i < size; i++){
+            if (arr[i].equals(0)){
+                return
+            }
+        }
     }
 
     @Override
     public void add(Object item) {
+        if (size == arr.length){
+            resize();
+        }
+    }
 
+    public void resize(){
+        Object[] newArr = new Object[arr.length * 2];
+        for (int i = 0; i < size; i++){
+            newArr[i] = arr[i];
+        }
+        arr = newArr;
     }
 
     @Override
