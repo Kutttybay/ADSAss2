@@ -166,7 +166,12 @@ public class MyArrayList implements MyList{
         return -1;
     }
 
-
+    /*
+    * This method finding last index of a given elements in array
+    * Loop starts from the end of the array and iterates backwards until it finds first occurrence of 'o'
+    * And return index
+    * If not find method return -1 for indicate that 'o' isn't in the array
+    */
     @Override
     public int lastIndexOf(Object o) {
         for (int i = size - 1; i >= 0; i--){
