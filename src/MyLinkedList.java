@@ -2,7 +2,7 @@ import org.w3c.dom.Node;
 
 public class MyLinkedList<T> implements MyList<T> {
 
-    private Node head;
+    private Node<T> head;
     private int size;
 
     private static class Node<T>{
@@ -71,6 +71,15 @@ public class MyLinkedList<T> implements MyList<T> {
             size ++;
         }
     }
+
+    public Node<T> getNode(int index){
+        Node<T> curr = head;
+        for (int i = 0; i < index; i++){
+            curr = curr.next;
+        }
+        return curr;
+    }
+
 
     @Override
     public boolean remove(Object item) {
