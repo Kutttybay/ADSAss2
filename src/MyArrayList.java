@@ -3,6 +3,8 @@ public class MyArrayList implements MyList{
     private int size = 0;
     private int capasity = 5;
     private Object[] arr = new Object[capasity];
+
+
     /*
     * Method size
     * when it will call return size of ArrayList
@@ -11,6 +13,8 @@ public class MyArrayList implements MyList{
     public int size() {
         return size;
     }
+
+
 
     /*
     * This method checks all objects of list
@@ -26,6 +30,9 @@ public class MyArrayList implements MyList{
         }
         return  false;
     }
+
+
+
     /*
     * This method add objects to List
     * First check if there is enough space in the list to add the object
@@ -38,6 +45,9 @@ public class MyArrayList implements MyList{
         }
         arr[size++] = item;
     }
+
+
+
     /*
     * method resize make the list bigger by creating new list
     * copying all the elements of old list to new
