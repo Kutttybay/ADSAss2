@@ -61,9 +61,26 @@ public class MyArrayList implements MyList{
         arr = newArr;
     }
 
+    /*
+    * This method starts work like first add method
+    * This code adds an object to a specific index in a list by first checking if the index is within the bounds of the list.
+    * Then code check space for add objects to list
+    * Then shifts all the elements after specified index one positino to the right
+    *
+    */
     @Override
     public void add(Object item, int index) {
-
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == arr.length){
+            resize();
+        }
+        for (int i = size; i > index; i--){
+            arr[i] = arr[i - 1];
+        }
+        arr[index] = item;
+        size++;
     }
 
     @Override
