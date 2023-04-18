@@ -1,26 +1,22 @@
 import org.w3c.dom.Node;
 
-public class MyLinkedList implements MyList {
+public class MyLinkedList<T> implements MyList<T> {
 
-    private static class Node {
-        Object data;
-        Node next;
-        Node prev;
+    private Node head;
+    private int size;
 
-        public Node(Object data) {
+    private static class Node<T>{
+        T data;
+        Node<T> next;
+
+        Node(T data){
             this.data = data;
-            next = null;
-            prev = null;
+            this.next = null;
         }
     }
 
-    private Node head;
-    private Node tail;
-    private int size;
-
-    public MyLinkedList() {
+    public MyLinkedList(){
         head = null;
-        tail = null;
         size = 0;
     }
 
@@ -36,16 +32,18 @@ public class MyLinkedList implements MyList {
     }
 
     @Override
-    public void add(Object item) {
+    public void add(T item) {
         if (head == null){
-            head = new Node((Object) item);
+            head = new Node<T>(item);
         }
         else {
-            Node curr = head;
+            Node<T> curr = head;
             while (curr.next != null){
-
+                curr = curr.next;
             }
+            curr.next = new Node<T>(item);
         }
+        size++
     }
 
     @Override
