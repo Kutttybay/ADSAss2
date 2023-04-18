@@ -65,8 +65,9 @@ public class MyArrayList implements MyList{
     * This method starts work like first add method
     * This code adds an object to a specific index in a list by first checking if the index is within the bounds of the list.
     * Then code check space for add objects to list
-    * Then shifts all the elements after specified index one positino to the right
-    *
+    * Then shifts all the elements after specified index one position to the right for the new object
+    * And put the new Object by index
+    * Finally it increase the size of the list by one
     */
     @Override
     public void add(Object item, int index) {
