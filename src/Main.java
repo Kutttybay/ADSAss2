@@ -13,6 +13,9 @@ public class Main {
         arrayList.add(166);
         arrayList.add(2515);
         arrayList.add(32);
+        arrayList.indexOf(166);
+
+        System.out.println(arrayList.indexOf(166));
 
         System.out.println(arrayList.get(4));
         System.out.println(arrayList.size());
