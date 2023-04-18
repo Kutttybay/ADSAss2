@@ -32,6 +32,7 @@ public class MyArrayList implements MyList{
         if (size == arr.length){
             resize();
         }
+        arr[size++] = item;
     }
     /*
     * method resize make the list bigger by creating new list
