@@ -26,7 +26,11 @@ public class MyArrayList implements MyList{
         }
         return  false;
     }
-
+    /*
+    * This method add objects to List
+    * First check if there is enough space in the list to add the object
+    * if not , list makes bigger , then put in the end of list
+    */
     @Override
     public void add(Object item) {
         if (size == arr.length){
