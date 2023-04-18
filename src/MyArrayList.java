@@ -102,7 +102,11 @@ public class MyArrayList implements MyList{
     }
 
 
-
+    /*
+    * First check index to the valid range , throwing an exception if not
+    * After method get object to be removed and shifts all elements to the left
+    * Final it sets the last elements of size null , and decrements the size of the list
+    */
     @Override
     public Object remove(int index) {
         if (index < 0 || index > size){
