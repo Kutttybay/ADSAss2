@@ -120,6 +120,7 @@ public class MyArrayList implements MyList{
         return removed;
     }
 
+
     @Override
     public void clear() {
         arr = new Object[5];

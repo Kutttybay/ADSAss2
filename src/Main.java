@@ -21,6 +21,9 @@ public class Main {
 
         System.out.println(arrayList.size());
         System.out.println(arrayList.get(3));
+
+        arrayList.clear();
+        System.out.println(arrayList.size());
         // LinkedList
     }
 }
