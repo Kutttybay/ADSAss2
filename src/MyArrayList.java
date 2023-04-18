@@ -1,8 +1,11 @@
 public class MyArrayList implements MyList{
 
+    private int size = 0;
+    private int capasity = 5;
+    private Object[] arr = new Object[capasity];
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
