@@ -1,4 +1,24 @@
-public class MyLinkedList implements MyList{
+import org.w3c.dom.Node;
+
+public class MyLinkedList<T> implements MyList<T>{
+
+    private static class Node{
+        Object data;
+        Node next;
+        Node prev;
+
+        public Node(Object data){
+            this.data = data;
+            next = null;
+            prev = null;
+        }
+    }
+
+    private Node head;
+    private Node tail;
+    private int size;
+
+
     @Override
     public int size() {
         return 0;
