@@ -31,6 +31,13 @@ public class MyLinkedList<T> implements MyList<T> {
         return false;
     }
 
+
+    /*
+    * This method adds a new element to the end of a linked list
+    * If the linked list is empty, it creates a new node with the given item as data and assigns it as the head of the linked list
+    * If isn't it traverses the list until it reaches the last node, and adds a new node with the given item as data as the next node
+    * Size of the linked list is incremented after adding the new element
+    */
     @Override
     public void add(T item) {
         if (head == null){
@@ -43,7 +50,7 @@ public class MyLinkedList<T> implements MyList<T> {
             }
             curr.next = new Node<T>(item);
         }
-        size++
+        size++;
     }
 
     @Override
