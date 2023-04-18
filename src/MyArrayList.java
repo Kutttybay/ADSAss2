@@ -84,6 +84,12 @@ public class MyArrayList implements MyList{
         size++;
     }
 
+    /*
+    * This method tries to remove a specific item from a list
+    * It loop every object and if given parameter equals to checks item
+    * When he find given parameter he call another remove method
+    * But if dont find method return false
+    */
     @Override
     public boolean remove(Object item) {
         for (int i = 0 ; i < size; i++){
