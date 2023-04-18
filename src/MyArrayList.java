@@ -186,6 +186,10 @@ public class MyArrayList implements MyList{
     }
 
 
+    /*
+    * This method sort all elements in the array
+    * Start to 0 and end index-1
+    */
     @Override
     public void sort() {
         Arrays.sort(arr, 0, size);
