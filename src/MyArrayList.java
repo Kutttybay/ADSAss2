@@ -3,6 +3,10 @@ public class MyArrayList implements MyList{
     private int size = 0;
     private int capasity = 5;
     private Object[] arr = new Object[capasity];
+    /*
+    * Method size
+    * when it will call return size of ArrayList
+    */
     @Override
     public int size() {
         return size;

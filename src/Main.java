@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        MyArrayList arrayList = new MyArrayList();
+        MyLinkedList linkedList = new MyLinkedList();
+
+        // ArrayList
+
+        // LinkedList
     }
 }
