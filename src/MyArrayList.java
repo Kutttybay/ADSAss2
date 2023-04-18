@@ -99,6 +99,13 @@ public class MyArrayList implements MyList{
 
     }
 
+
+    /*
+    * This method get return object of list by the index
+    * First methods check if the index out of bounds
+    * And if yes throws an IndexOutOfBoundsException
+    * If the index valid method returns object by index in the list
+    */
     @Override
     public Object get(int index) {
         if (index < 0 || index >= size){
@@ -106,6 +113,7 @@ public class MyArrayList implements MyList{
         }
         return arr[index];
     }
+
 
     @Override
     public int indexOf(Object o) {
