@@ -101,9 +101,19 @@ public class MyArrayList implements MyList{
         return false;
     }
 
+
+
     @Override
     public Object remove(int index) {
-        return null;
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        Object removed = (Object) arr[index];
+        for (int i = index; i < size - 1; i++){
+            arr[i] = arr[i + 1];
+        }
+        arr[--size] = null;
+        return removed;
     }
 
     @Override
