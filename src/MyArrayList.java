@@ -27,7 +27,11 @@ public class MyArrayList implements MyList{
             resize();
         }
     }
-
+    /*
+    * method resize make the list bigger by creating new list
+    * copying all the elements of old list to new
+    * and then using the new list as like main
+    */
     public void resize(){
         Object[] newArr = new Object[arr.length * 2];
         for (int i = 0; i < size; i++){
