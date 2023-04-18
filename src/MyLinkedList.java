@@ -53,9 +53,23 @@ public class MyLinkedList<T> implements MyList<T> {
         size++;
     }
 
-    @Override
-    public void add(Object item, int index) {
 
+    @Override
+    public void add(T item, int index) {
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+        if (index == size){
+            add(item);
+        } else if (index == 0) {
+            head = new Node<T>(item, head);
+            size++;
+        }
+        else {
+            Node<T> prev = getNode(index - 1);
+            prev.next = new Node<T>(item, prev.next);
+            size ++;
+        }
     }
 
     @Override
