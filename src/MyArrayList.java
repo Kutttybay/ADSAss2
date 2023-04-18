@@ -121,9 +121,17 @@ public class MyArrayList implements MyList{
     }
 
 
+    /*
+    * This method clear all in the list
+    * First starts loop and all objects by index will be equals to null
+    * After all size will be equals to zero
+    */
     @Override
     public void clear() {
-        arr = new Object[5];
+        for (int i = 0; i < size; i++){
+            arr[i] = null;
+        }
+        size = 0;
     }
 
 
