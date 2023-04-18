@@ -26,8 +26,17 @@ public class Main {
         System.out.println(arrayList.size());
         System.out.println(arrayList.get(3));
 
+        arrayList.sort();
+        System.out.println(arrayList.get(0));
+        System.out.println(arrayList.get(1));
+        System.out.println(arrayList.get(2));
+        System.out.println(arrayList.get(3));
+        System.out.println(arrayList.get(4));
+        System.out.println(arrayList.get(5));
+        System.out.println(arrayList.get(6));
         arrayList.clear();
         System.out.println(arrayList.size());
+
         // LinkedList
     }
 }

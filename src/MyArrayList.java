@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyArrayList implements MyList{
 
     private int size = 0;
@@ -166,6 +168,7 @@ public class MyArrayList implements MyList{
         return -1;
     }
 
+
     /*
     * This method finding last index of a given elements in array
     * Loop starts from the end of the array and iterates backwards until it finds first occurrence of 'o'
@@ -182,8 +185,9 @@ public class MyArrayList implements MyList{
         return -1;
     }
 
+
     @Override
     public void sort() {
-
+        Arrays.sort(arr, 0, size);
     }
 }
