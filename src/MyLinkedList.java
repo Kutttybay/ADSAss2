@@ -1,13 +1,13 @@
 import org.w3c.dom.Node;
 
-public class MyLinkedList<T> implements MyList<T>{
+public class MyLinkedList<T> implements MyList<T> {
 
-    private static class Node{
+    private static class Node {
         Object data;
         Node next;
         Node prev;
 
-        public Node(Object data){
+        public Node(Object data) {
             this.data = data;
             next = null;
             prev = null;
@@ -17,6 +17,12 @@ public class MyLinkedList<T> implements MyList<T>{
     private Node head;
     private Node tail;
     private int size;
+
+    public MyLinkedList() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 
 
     @Override
