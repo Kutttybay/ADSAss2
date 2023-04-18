@@ -10,6 +10,9 @@ public class Main {
         arrayList.add(12);
         arrayList.add(25);
         arrayList.add(1);
+        arrayList.add(166);
+        arrayList.add(2515);
+        arrayList.add(32);
 
         System.out.println(arrayList.size());
 
