@@ -150,6 +150,12 @@ public class MyArrayList implements MyList{
     }
 
 
+    /*
+    * Method search for the index of an object in a array
+    * Method search object 'o', check all by the for-loop and if object equal to 'o'
+    * Return object by the index
+    * If not method return -1 to indicate that the object wasn't founded
+    */
     @Override
     public int indexOf(Object o) {
         for (int i = 0; i < size; i++){
