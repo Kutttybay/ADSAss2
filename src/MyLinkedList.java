@@ -1,4 +1,16 @@
-public class MyLinkedList<T> implements MyList<T> {
+public class MyLinkedList<T> implements MyList {
+    private MyArrayList ArrList = new MyArrayList();
+    private class Node<T>{
+        T val;
+        Node previous;
+        Node next;
+        public Node(T v){
+            val = v;
+            previous = null;
+            next = null;
+        }
+    }
+
 
     @Override
     public int size() {
@@ -11,22 +23,22 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public void add(T item) {
+    public void add(Object item) {
 
     }
 
     @Override
-    public void add(T item, int index) {
+    public void add(Object item, int index) {
 
     }
 
     @Override
-    public boolean remove(T item) {
+    public boolean remove(Object item) {
         return false;
     }
 
     @Override
-    public T remove(int index) {
+    public Object remove(int index) {
         return null;
     }
 
@@ -36,7 +48,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public T get(int index) {
+    public Object get(int index) {
         return null;
     }
 
