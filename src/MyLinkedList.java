@@ -223,6 +223,12 @@ public class MyLinkedList<T> implements MyList {
         return -1;
     }
 
+
+
+    /*
+    * Этот метод такой же как был до этого и работает так же
+    * но только с конца , то есть наоборот
+    */
     @Override
     public int lastIndexOf(Object o) {
         int i = size - 1;
