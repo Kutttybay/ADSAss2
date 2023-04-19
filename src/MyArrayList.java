@@ -152,6 +152,7 @@ public class MyArrayList implements MyList{
     }
 
 
+
     /*
     * Method search for the index of an object in a array
     * Method search object 'o', check all by the for-loop and if object equal to 'o'
@@ -169,6 +170,7 @@ public class MyArrayList implements MyList{
     }
 
 
+
     /*
     * This method finding last index of a given elements in array
     * Loop starts from the end of the array and iterates backwards until it finds first occurrence of 'o'
@@ -184,6 +186,7 @@ public class MyArrayList implements MyList{
         }
         return -1;
     }
+
 
 
     /*
