@@ -1,10 +1,11 @@
 import java.util.Arrays;
 
-public class MyArrayList implements MyList{
+public class MyArrayList<T> implements MyList{
 
     private int size = 0;
     private int capasity = 5;
     private Object[] arr = new Object[capasity];
+
 
 
     /*

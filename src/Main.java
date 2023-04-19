@@ -32,22 +32,50 @@ public class Main {
 
     public static void showArrayList(){
         MyArrayList arrayList = new MyArrayList();
-        MyLinkedList linkedList = new MyLinkedList();
-        System.out.println("Size: " + arrayList.size());
-        System.out.println("Enter the int variables , for stop enter -1");
-        int nextInt;
-        Scanner sc = new Scanner(System.in);
-        while (true){
-            nextInt = sc.nextInt();
-            if (nextInt == -1){
-                break;
-            }
-            arrayList.add(nextInt);
-        }
 
+        arrayList.add(2);
+        arrayList.add(4);
+        arrayList.add(6);
+        arrayList.add(8);
+        arrayList.add(10);
+        arrayList.add(12);
+        arrayList.add(14);
+        arrayList.add(20, 5);
+        arrayList.remove((Object) 6);
+        arrayList.remove(2);
+        arrayList.get(5);
+        arrayList.indexOf(8);
+        arrayList.lastIndexOf(12);
+        System.out.println(arrayList.contains(2));
+        System.out.println(arrayList.size());
+        arrayList.sort();
+        System.out.println(arrayList.get(0));
+        System.out.println(arrayList.get(1));
+        System.out.println(arrayList.get(2));
+        System.out.println(arrayList.get(3));
+        System.out.println(arrayList.get(4));
+        System.out.println(arrayList.get(5));
+        arrayList.clear();
     }
 
     public static void showLinkedList(){
-
+        MyLinkedList linkedList = new MyLinkedList();
+        linkedList.add(1);
+        linkedList.add(3);
+        linkedList.add(10);
+        linkedList.add(4);
+        linkedList.add(2);
+        System.out.println(linkedList.size());
+        System.out.println(linkedList.get(0));
+        linkedList.add(15, 3);
+        linkedList.remove((Object) 3);
+        linkedList.remove(1);
+        System.out.println(linkedList.indexOf(10));
+        System.out.println(linkedList.indexOf(4));
+        System.out.println(linkedList.contains(2));
+        linkedList.sort();
+        System.out.println("size : " + linkedList.size());
+        linkedList.sort();
+        linkedList.clear();
     }
 }
