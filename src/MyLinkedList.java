@@ -1,19 +1,21 @@
 public class MyLinkedList<T> implements MyList {
     private MyArrayList ArrList = new MyArrayList();
     private class Node<T>{
-        T val;
+        T data;
         Node previous;
         Node next;
-        public Node(T v){
-            val = v;
-            previous = null;
-            next = null;
+        public Node(T data){
+            this.data = data;
+            this.previous = null;
+            this.next = null;
         }
     }
     private Node<T> head;
     private Node<T> tail;
     private int size;
     MyLinkedList(){
+        head = null;
+        tail = null;
         size = 0;
     }
 
@@ -24,8 +26,17 @@ public class MyLinkedList<T> implements MyList {
         return size;
     }
 
+
+
     @Override
     public boolean contains(Object o) {
+        Node curr = head;
+        while (curr != null){
+            if (curr.data.equals(o)){
+                return true;
+            }
+            curr = curr.next;
+        }
         return false;
     }
 
