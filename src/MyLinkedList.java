@@ -195,7 +195,22 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public Object get(int index) {
-        return null;
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException(index);
+        }
+        Node<T> curr;
+        if (index < size / 2){
+            curr = head;
+            for (int i = 0; i < index; i++){
+                curr = curr.next;
+            }
+        } else {
+            curr = tail;
+            for (int i = size - 1; i > index; i--){
+                curr = curr.previous;
+            }
+        }
+        return curr.data;
     }
 
 
