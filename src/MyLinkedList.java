@@ -149,7 +149,16 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public Object remove(int index) {
-        return null;
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException(index + size);
+        }
+        Node curr = head;
+        for (int i = 0; i < index; i++){
+            curr = curr.next;
+        }
+        if (curr.previous != null){
+            curr.previous.next = curr.next;
+        }
     }
 
     @Override
