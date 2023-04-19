@@ -26,10 +26,21 @@ public class Main {
         arrayList.clear();
 
 
+        System.out.println();
+        System.out.println();
         // LinkedList
 
         linkedList.add(12);
         linkedList.add(32);
         linkedList.add(51);
+        linkedList.add(24);
+        linkedList.add(19);
+        linkedList.add(42);
+
+        System.out.println(linkedList.size());
+        System.out.println(linkedList.contains((Object) 3));
+        linkedList.remove(2);
+        linkedList.remove((Object) 51);
+        System.out.println(linkedList.size());
     }
 }
