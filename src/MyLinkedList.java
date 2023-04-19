@@ -42,7 +42,16 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public void add(Object item) {
-
+        Node newNode = new Node(item);
+        if (tail == null){
+            head = newNode;
+        }
+        else {
+            tail.next = newNode;
+            newNode.previous = tail;
+        }
+        tail = newNode;
+        size++;
     }
 
     @Override
