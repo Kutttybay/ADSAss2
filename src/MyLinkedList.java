@@ -193,6 +193,14 @@ public class MyLinkedList<T> implements MyList {
         size = 0;
     }
 
+
+
+    /*
+    * Этот метод позволяет получить элемент списка по его индексу
+    * Сначала проверяется в диапозоне ли индекс или нет , и выбрасивает исключения
+    * Перебираем как и с головы так и с снизу до введенного индекса
+    * После поиска результат возвращается
+    */
     @Override
     public Object get(int index) {
         if (index < 0 || index >= size){
@@ -212,6 +220,7 @@ public class MyLinkedList<T> implements MyList {
         }
         return curr.data;
     }
+
 
 
 
