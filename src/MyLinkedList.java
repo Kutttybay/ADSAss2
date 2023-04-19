@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Objects;
-
 public class MyLinkedList<T> implements MyList {
     private MyArrayList ArrList = new MyArrayList();
     private class Node<T>{
@@ -270,22 +267,24 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public void sort() {
-        if (size <= 1){
-            return;
-        }
-        boolean swap = true;
-        while (swap){
-            swap = true;
-            Node<T> curr = head;
-            for (int i = 0; i < size-1 ; i++){
-                if (curr.data.compareTo(curr.next.data) > 0){
-                    T temp = curr.data;
-                    curr.data = (T) curr.next.data;
-                    curr.next.data = temp;
-                    swap = true;
-                }
-                curr = curr.next;
-            }
-        }
+       if (size < 2){
+           return;
+       }
+       Node<T> curr = head;
+       Node<T> index;
+       T temp;
+
+       while (curr != null){
+           index = curr.next;
+           while (index != null){
+               if (((Comparable<T>)curr.data).compareTo(index.data) > 0){
+                   temp = curr.data;
+                   curr.data = index.data;
+                   index.data = temp;
+               }
+               index = index.next;
+           }
+           curr = curr.next;
+       }
     }
 }

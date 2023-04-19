@@ -37,13 +37,13 @@ public class Main {
         linkedList.add(19);
         linkedList.add(42);
 
-        System.out.println(linkedList.size());
-        System.out.println(linkedList.contains((Object) 3));
-        System.out.println(linkedList.indexOf(3));
-        linkedList.remove(2);
-        linkedList.remove((Object) 24);
-        System.out.println(linkedList.size());
+        linkedList.sort();
+
+        System.out.println(linkedList.get(0));
+        System.out.println(linkedList.get(1));
+        System.out.println(linkedList.get(2));
         System.out.println(linkedList.get(3));
-        linkedList.clear();
+        System.out.println(linkedList.get(4));
+        System.out.println(linkedList.get(5));
     }
 }
