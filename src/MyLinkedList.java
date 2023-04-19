@@ -97,7 +97,7 @@ public class MyLinkedList<T> implements MyList {
             curr.next.previous = newNode;
             curr.next = newNode;
         }
-        size++
+        size++;
     }
 
     @Override

@@ -27,5 +27,9 @@ public class Main {
 
 
         // LinkedList
+
+        linkedList.add(12);
+        linkedList.add(32);
+        linkedList.add(51);
     }
 }
