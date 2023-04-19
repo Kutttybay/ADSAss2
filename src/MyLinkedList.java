@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class MyLinkedList<T> implements MyList {
     private MyArrayList ArrList = new MyArrayList();
     private class Node<T>{
@@ -223,7 +225,16 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        int i = size - 1;
+        Node<T> curr = tail;
+        while (curr != null){
+            if (curr.data.equals(o)){
+                return i;
+            }
+            i--;
+            curr = curr.previous;
+        }
+        return -1;
     }
 
     @Override
