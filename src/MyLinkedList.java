@@ -10,11 +10,18 @@ public class MyLinkedList<T> implements MyList {
             next = null;
         }
     }
+    private Node<T> head;
+    private Node<T> tail;
+    private int size;
+    MyLinkedList(){
+        size = 0;
+    }
+
 
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
