@@ -1,49 +1,53 @@
+import java.util.Scanner;
+
 public class Main {
+    MyArrayList arrayList = new MyArrayList();
+    MyLinkedList linkedList = new MyLinkedList();
     public static void main(String[] args) {
+        boolean tf = true;
+        int v;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Hello ! This is assignment 2 \n" +
+                    "Please choice 1 or 2 (0 exit) \n" +
+                    "1. My Array List\n" +
+                    "2. My Linked List\n" +
+                    "0. Exit");
+            v = sc.nextInt();
+            switch (v){
+                case 1:
+                    showArrayList();
+                    break;
+                case 2:
+                    showLinkedList();
+                    break;
+                case 3:
+                    System.out.println("Exit");
+                    break;
+                default:
+                    System.out.println("Wrong answer!");
+            }
+        }while (v != 0);
+    }
+
+    public static void showArrayList(){
         MyArrayList arrayList = new MyArrayList();
         MyLinkedList linkedList = new MyLinkedList();
+        System.out.println("Size: " + arrayList.size());
+        System.out.println("Enter the int variables , for stop enter -1");
+        int nextInt;
+        Scanner sc = new Scanner(System.in);
+        while (true){
+            nextInt = sc.nextInt();
+            if (nextInt == -1){
+                break;
+            }
+            arrayList.add(nextInt);
+        }
 
-        // ArrayList
+    }
 
-        arrayList.add(5);
-        arrayList.add(6);
-        arrayList.add(12);
-        arrayList.add(25);
-        arrayList.add(1);
-        arrayList.add(166);
-        arrayList.add(2515);
-        arrayList.add(32);
-        System.out.println(arrayList.get(5));
-        arrayList.remove((Object) 2515);
-        arrayList.remove(6);
-        System.out.println(arrayList.get(2));
-        arrayList.indexOf(32);
-        arrayList.lastIndexOf(1);
-        System.out.println(arrayList.contains(25));
-        System.out.println(arrayList.size());
-        arrayList.sort();
-        System.out.println(arrayList.get(0));
-        arrayList.clear();
+    public static void showLinkedList(){
 
-
-        System.out.println();
-        System.out.println();
-        // LinkedList
-
-        linkedList.add(12);
-        linkedList.add(32);
-        linkedList.add(51);
-        linkedList.add(24);
-        linkedList.add(19);
-        linkedList.add(42);
-
-        linkedList.sort();
-
-        System.out.println(linkedList.get(0));
-        System.out.println(linkedList.get(1));
-        System.out.println(linkedList.get(2));
-        System.out.println(linkedList.get(3));
-        System.out.println(linkedList.get(4));
-        System.out.println(linkedList.get(5));
     }
 }
