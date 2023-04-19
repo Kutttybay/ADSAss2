@@ -42,5 +42,6 @@ public class Main {
         linkedList.remove(2);
         linkedList.remove((Object) 24);
         System.out.println(linkedList.size());
+        linkedList.clear();
     }
 }
