@@ -147,6 +147,16 @@ public class MyLinkedList<T> implements MyList {
 
 
 
+    /*
+    * Этот метод реализует удаленния элемента из списка по индексу
+    * Сначала проверяется, находится ли индекс в пределах допустимого диапозоно
+    * Затем находим узел, находящийся в списке под указанным индексом, и сохраняем его в переменной curr
+    * Если предыдущий узел от curr не равен null,
+    * то мы перенаправляем ссылку на следующий узел от предыдущего узла на следующий узел от curr, таким образом, пропуская curr.
+    * Если же предыдущий узел от curr равен null, то это означает, что curr находится в голове списка, поэтому мы просто обновляем голову списка
+    * Затем мы аналогично обрабатываем ссылку на предыдущий узел от curr, чтобы убедиться, что список остается связным
+    * Наконец, мы уменьшаем размер списка и возвращаем данные, которые были хранятся в узле curr, который был удален
+    */
     @Override
     public Object remove(int index) {
         if (index < 0 || index >= size){
@@ -159,7 +169,20 @@ public class MyLinkedList<T> implements MyList {
         if (curr.previous != null){
             curr.previous.next = curr.next;
         }
+        else {
+            head = curr.next;
+        }
+        if (curr.next != null){
+            curr.next.previous = curr.previous;
+        }
+        else {
+            tail = curr.previous;
+        }
+        size--;
+        return curr.data;
     }
+
+
 
     @Override
     public void clear() {
