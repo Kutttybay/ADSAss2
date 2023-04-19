@@ -111,14 +111,41 @@ public class MyLinkedList<T> implements MyList {
         size++;
     }
 
+
+    /*
+    * Этот ментод отвечает за удаленния обьекта из связного списка
+    * После того как метод найдет с узла нужные данные , метод удаляет его и возвращает true
+    * Если элеменет не найдет false
+    */
     @Override
     public boolean remove(Object item) {
         Node curr = head;
         while (curr != null){
-
+            if (curr.data.equals(item)){
+                if (curr == head){
+                    head = head.next;
+                    if (head != null){
+                        head.previous = null;
+                    }
+                } else if (curr == tail) {
+                    tail = tail.previous;
+                    if (tail != null){
+                        tail.next = null;
+                    }
+                }
+                else {
+                    curr.previous.next = curr.next;
+                    curr.next.previous = curr.previous;
+                }
+                size--;
+                return true;
+            }
+            curr = curr.next;
         }
         return false;
     }
+
+
 
     @Override
     public Object remove(int index) {
