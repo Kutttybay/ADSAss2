@@ -68,6 +68,17 @@ public class MyLinkedList<T> implements MyList {
         size++;
     }
 
+
+
+    /*
+    * Этот метод добавляет новый элемент в заданную позицию в двусвязном списке
+    * Если индекс меньше 0 или больше размера списка, метод выкинет исключение
+    * Если индекс равен 0, новый элемент будет добавлен в начало списка,
+    * а если индекс равен размеру списка, новый элемент будет добавлен в конец
+    * или же метод найдет узел в позиции index-1, установит новый узел следующим для этого узла,
+    * а следующий узел станет следующим для нового узла
+    * Размер списка будет увеличен на 1 после добавления элемента.
+    */
     @Override
     public void add(Object item, int index) {
         if (index < 0 || index > size){
@@ -102,6 +113,10 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public boolean remove(Object item) {
+        Node curr = head;
+        while (curr != null){
+
+        }
         return false;
     }
 
