@@ -46,6 +46,14 @@ public class MyLinkedList<T> implements MyList {
         return false;
     }
 
+
+
+    /*
+    * Данный метод добавляет новый элемент в конец списка
+    * Если список пустой, то новый элемент становиться головой списка
+    * Или же в последний элемент списка , с ссылкой на предедущий и следующий элменты
+    * Затем указатель на последний элемент списка обновляется на добавленный элемент , а размер списка увеличевается на 1
+    */
     @Override
     public void add(Object item) {
         Node newNode = new Node(item);
@@ -62,7 +70,34 @@ public class MyLinkedList<T> implements MyList {
 
     @Override
     public void add(Object item, int index) {
-
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException(index + size);
+        }
+        Node newNode = new Node(item);
+        if (index == 0){
+            newNode.next = head;
+            if (head != null){
+                head.previous = newNode;
+            }
+            head = newNode;
+            if (tail == null){
+                tail = newNode;
+            }
+        } else if (index == size) {
+            tail.next = newNode;
+            newNode.previous = tail;
+            tail = newNode;
+        } else {
+            Node curr = head;
+            for (int i = 0; i < index - 1; i++){
+                curr = curr.next;
+            }
+            newNode.next = curr.next;
+            newNode.previous = curr;
+            curr.next.previous = newNode;
+            curr.next = newNode;
+        }
+        size++
     }
 
     @Override
