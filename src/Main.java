@@ -40,7 +40,7 @@ public class Main {
         System.out.println(linkedList.size());
         System.out.println(linkedList.contains((Object) 3));
         linkedList.remove(2);
-        linkedList.remove((Object) 51);
+        linkedList.remove((Object) 24);
         System.out.println(linkedList.size());
     }
 }
