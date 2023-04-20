@@ -66,8 +66,8 @@ public class MyArrayList<T> implements MyList{
 
     /*
     * This method starts work like first add method
-    * This code adds an object to a specific index in a list by first checking if the index is within the bounds of the list.
-    * Then code check space for add objects to list
+    * This method adds an object to a specific index in a list by first checking if the index is within the bounds of the list.
+    * Then method check space for add objects to list
     * Then shifts all the elements after specified index one position to the right for the new object
     * And put the new Object by index
     * Finally it increase the size of the list by one
@@ -129,13 +129,13 @@ public class MyArrayList<T> implements MyList{
     * First starts loop and all objects by index will be equals to null
     * After all size will be equals to zero
     */
-    @Override
-    public void clear() {
-        for (int i = 0; i < size; i++){
-            arr[i] = null;
+        @Override
+        public void clear() {
+            for (int i = 0; i < size; i++){
+                arr[i] = null;
+            }
+            size = 0;
         }
-        size = 0;
-    }
 
 
     /*
