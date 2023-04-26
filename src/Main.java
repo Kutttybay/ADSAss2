@@ -37,11 +37,10 @@ public class Main {
         arrayList.add(4);
         arrayList.add(6);
         arrayList.add(8);
-        arrayList.add(10);
-        arrayList.add(12);
         arrayList.add(14);
+        Object arr[] = {2,3}
+        arrayList.addAll(arr, 3);
         arrayList.add(20, 5);
-        arrayList.addAll();
         arrayList.remove((Object) 6);
         arrayList.remove(2);
         arrayList.get(5);
