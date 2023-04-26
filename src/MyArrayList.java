@@ -25,7 +25,7 @@ public class MyArrayList<T> implements MyList {
         }
         Object[] newArr = new Object[size + newSize];
         for (int i = size; i > index; i--){
-            arr[]
+
         }
     }
 
