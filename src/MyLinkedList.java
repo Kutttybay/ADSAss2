@@ -34,17 +34,17 @@ public class MyLinkedList<T> implements MyList {
     * Используем цикл фор пока curr не станем равным нулю
     * Внутри цыкла с if ом проверяется условие если она верна то возрощается true , если нет то false
     */
-    @Override
-    public boolean contains(Object o) {
-        Node curr = head;
-        while (curr != null){
-            if (curr.data.equals(o)){
-                return true;
+        @Override
+        public boolean contains(Object o) {
+            Node curr = head;
+            while (curr != null){
+                if (curr.data.equals(o)){
+                    return true;
+                }
+                curr = curr.next;
             }
-            curr = curr.next;
+            return false;
         }
-        return false;
-    }
 
 
 
