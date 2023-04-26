@@ -27,6 +27,10 @@ public class MyLinkedList<T> implements MyList {
     }
 
 
+    public void addAll(Object o, int inedx){
+
+    }
+
 
     /*
     * Этот метод проверяет присуствует ли указанный элемент в списке или нет
