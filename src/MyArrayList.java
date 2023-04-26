@@ -16,19 +16,22 @@ public class MyArrayList<T> implements MyList {
         return size;
     }
 
-    public void addAll(Object item, int index){
-        if (size == arr.length){
+    public void addAll(Object item, int index) {
+        if (size == arr.length) {
             resize();
         }
-        if (index < 0 || index > size){
+        if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
         Object[] newArr = new Object[arr.length * 2];
-        int newList =
-        for (int i = size; i > index; i--){
-            arr[i] = arr[i - 1];
-            size++;
+        for (int i = size - 1; i >= index; i++) {
+            arr[i + newArr.length] = arr[i];
         }
+
+        for (int i = 0; i < newArr.length; i++) {
+            arr[i + index + 1] = newArr[i];
+        }
+        size = newArr.length;
     }
 
 
