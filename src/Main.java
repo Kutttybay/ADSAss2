@@ -38,7 +38,7 @@ public class Main {
         arrayList.add(6);
         arrayList.add(8);
         arrayList.add(14);
-        Object arr[] = {2,3}
+        Object arr[] = {2,3};
         arrayList.addAll(arr, 3);
         arrayList.add(20, 5);
         arrayList.remove((Object) 6);
