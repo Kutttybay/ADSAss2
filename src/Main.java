@@ -7,15 +7,6 @@ public class Main {
         boolean tf = true;
         int v;
         Scanner sc = new Scanner(System.in);
-        System.out.println("AddAll Method write size of list");
-        int ssize = sc.nextInt();
-        Object[] otherList = new Object[ssize];
-        System.out.println("Write what will be in this array");
-        for (int i = 0; i >= ssize; i++){
-            int arrr = sc.nextInt();
-            otherList[i] = arrr;
-        }
-
         do {
             System.out.println("Hello ! This is assignment 2 \n" +
                     "Please choice 1 or 2 (0 exit) \n" +
@@ -50,6 +41,7 @@ public class Main {
         arrayList.add(12);
         arrayList.add(14);
         arrayList.add(20, 5);
+        arrayList.addAll();
         arrayList.remove((Object) 6);
         arrayList.remove(2);
         arrayList.get(5);
