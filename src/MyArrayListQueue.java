@@ -1,4 +1,4 @@
-public class MyArrayLisyQueue<T> {
+public class MyArrayListQueue<T> {
     MyArrayList myArrayList = new MyArrayList<T>();
 
     /*
