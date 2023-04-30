@@ -38,6 +38,12 @@ public class MyArrayLisyQueue<T> {
         return (T) myArrayList.remove(0);
     }
 
-
-
+    /*
+    * @throw NoSuchFieldError if the queue is empty
+    * @return the element at the front of queue
+    */
+    public T peek() throws NoSuchFieldError{
+        isEmptyThrowException();
+        return (T) myArrayList.get(0);
+    }
 }
