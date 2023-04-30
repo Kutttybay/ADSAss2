@@ -37,6 +37,11 @@ public class MyLinkedListQueue<T> {
         return (T) myLinkedList.remove(0);
     }
 
+    /*
+    * @throws NoSuchFieldException if the queue is empty
+    * @return the element at the front of the queue
+    * returns the element at the front of the queue without removing it
+    */
     public T peek(){
         isEmptyThrowsException();
         return (T) myLinkedList.get(0);

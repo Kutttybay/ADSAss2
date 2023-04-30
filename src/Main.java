@@ -26,7 +26,15 @@ public class Main {
         System.out.println(myArrayListStack.pop());
         System.out.println(myArrayListStack.peek());
 
-
+        System.out.println();
+        // MyLinkedListQueue
+        System.out.println("MyLinkedListQueue");
+        myLinkedListQueue.enqueue(8);
+        myLinkedListQueue.enqueue(10);
+        myLinkedListQueue.enqueue(12);
+        System.out.println(myLinkedListQueue.dequeue());
+        System.out.println(myLinkedListQueue.dequeue());
+        System.out.println(myLinkedListQueue.peek());
 
     }
 }
