@@ -15,5 +15,18 @@ public class Main {
         System.out.println(myArrayListQueue.dequeue());
         System.out.println(myArrayListQueue.dequeue());
         System.out.println(myArrayListQueue.peek());
+
+        System.out.println();
+        // MyArrayListStack
+        System.out.println("MyArrayListStack");
+        myArrayListStack.push(1);
+        myArrayListStack.push(2);
+        myArrayListStack.push(3);
+        System.out.println(myArrayListStack.pop());
+        System.out.println(myArrayListStack.pop());
+        System.out.println(myArrayListStack.peek());
+
+
+
     }
 }
