@@ -36,5 +36,14 @@ public class Main {
         System.out.println(myLinkedListQueue.dequeue());
         System.out.println(myLinkedListQueue.peek());
 
+        System.out.println();
+        // MyLinkedListStack
+        System.out.println("MyLinkedListStack");
+        myLinkedListStack.push(4);
+        myLinkedListStack.push(5);
+        myLinkedListStack.push(6);
+        System.out.println(myLinkedListStack.pop());
+        System.out.println(myLinkedListStack.pop());
+        System.out.println(myLinkedListStack.peek());
     }
 }
