@@ -30,4 +30,15 @@ public class MyArrayListStack<T> {
         myArrayList.add(element, 0);
     }
 
+    /*
+    * @throws EmptyStackException if the stack empty
+    * @return The element at the top of stack
+    * remove and return the element at the top of stack
+    */
+    public T pop(){
+        isEmptyThrowException();
+        return (T) myArrayList.remove(0);
+    }
+
+
 }
