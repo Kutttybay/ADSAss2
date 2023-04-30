@@ -31,7 +31,13 @@ public class MyArrayLisyQueue<T> {
         myArrayList.add(element);
     }
 
+    /*
+    * Remove element from the front of queue
+    */
     public T dequeue(){
+        return (T) myArrayList.remove(0);
     }
+
+
 
 }
