@@ -41,6 +41,7 @@ public class MyArrayListQueue<T> {
     /*
     * @throw NoSuchFieldError if the queue is empty
     * @return the element at the front of queue
+    * Return element at the front of queue without removing it
     */
     public T peek() throws NoSuchFieldError{
         isEmptyThrowException();

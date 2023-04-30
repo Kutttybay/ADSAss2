@@ -40,5 +40,13 @@ public class MyArrayListStack<T> {
         return (T) myArrayList.remove(0);
     }
 
-
+    /*
+    * @throws EmptyStackException if the stack empty
+    * @return element at the top of the stack
+    * return the element at the top of stack without removing it
+    */
+    public T peek(){
+        isEmptyThrowException();
+        return (T) myArrayList.get(0);
+    }
 }
