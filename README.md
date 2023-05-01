@@ -1,3 +1,227 @@
+# $\S1.$ MyArrayListQueue
+## isEmpty()
+```java
+public boolean isEmpty(){
+        return this.size() == 0;
+    }
+```
+This method check queue empty or not
+If empty return true, else false
+<br/>
+## size()
+``` java
+public int size(){
+        return myArrayList.size();
+    }
+```
+Return size of queue
+<br/>
+## isEmptyThrowException() throws NoSuchFieldError
+``` java
+public void isEmptyThrowException() throws NoSuchFieldError {
+        if (isEmpty()){
+            throw new NoSuchFieldError();
+        }
+    }
+```
+throws NoSuchFieldError if the queue is empty 
+<br/>
+## enqueue(T element)
+``` java
+public void enqueue(T element){
+        myArrayList.add(element);
+    }
+```
+Add elements to the back of equeue
+<br/>
+## T dequeue()
+``` java
+public T dequeue(){
+        return (T) myArrayList.remove(0);
+    }
+```
+Remove elenet from front of queue
+<br/>
+## T peek() 
+``` java
+public T peek() throws NoSuchFieldError{
+        isEmptyThrowException();
+        return (T) myArrayList.get(0);
+    }
+```
+Return element at the front of queue without removing it
+<br/>
+# $\S2.$ MyArrayListStack
+## isEmpty()
+``` java
+public boolean isEmpty(){
+        return this.size() == 0;
+    }
+```
+This method check queue empty or not
+If empty return true, else false
+<br/>
+## Size()
+```java
+public int size(){
+        return myArrayList.size();
+    }
+```
+Return size of stack
+<br/>
+## isEmptyThrowException()
+``` java
+public void isEmptyThrowException(){
+        if (isEmpty()){
+            throw new EmptyStackException();
+        }
+    }
+```
+Throws EmptyStackException if Stack is empty 
+<br/>
+## pust(T element)
+``` java
+public void push(T element){
+        myArrayList.add(element, 0);
+    }
+```
+Add element to the top of stack
+<br/>
+## T pop()
+``` java
+public T pop(){
+        isEmptyThrowException();
+        return (T) myArrayList.remove(0);
+    }
+```
+Return and remove element in top of the stack
+<br/>
+## T peek()
+``` java
+public T peek(){
+        isEmptyThrowException();
+        return (T) myArrayList.get(0);
+    }
+```
+Return element in top of the stack without removing it 
+<br/>
+
+# $\S3.$ MyLinkedListQueue
+## size()
+``` java
+public int size() {
+        return myLinkedList.size();
+    }
+```
+return size of queue
+<br/>
+## isEmpty()
+``` java
+public boolean isEmpty(){
+        return this.size() == 0;
+    }
+```
+This method check queue empty or not
+If empty return true, else false
+<br/>
+## isEmptyThrowException()
+``` java
+public void isEmptyThrowsException(){
+        if (isEmpty()){
+            throw new NoSuchElementException();
+        }
+    }
+``` 
+Throws NoSuchElementException if the queue is empty
+<br/>
+## enqueue(T element)
+``` java
+public void enqueue(T element){
+        myLinkedList.add(element);
+    }
+```
+Add element to the back of queue
+<br/>
+## T dequeue()
+``` java
+    public T dequeue(){
+        return (T) myLinkedList.remove(0);
+    }
+```
+Remove element from the front of queue
+<br/>
+## T peek()
+``` java
+    public T peek(){
+        isEmptyThrowsException();
+        return (T) myLinkedList.get(0);
+    }
+```
+Return element from the front of queue without removing it 
+<br/>
+# $\S4.$ MyLinkedListStack
+## size()
+``` java
+    public int size(){
+        return myLinkedList.size();
+    }
+```
+return size of stack 
+<br/>
+## isEmpty()
+``` java
+    public boolean isEmpty(){
+        return this.size() == 0;
+    }
+```
+This method check queue empty or not
+If empty return true, else false
+<br/>
+## isEmptyThrowException()
+``` java
+    public void isEmptyThrowException(){
+        if (isEmpty()){
+            throw new EmptyStackException();
+        }
+    }
+```
+Throws EmptyStackException if the Stack is empty
+<br/>
+## pust(T element)
+``` java
+public void push(T element){
+        myLinkedList.add(element, 0);
+    }
+```
+add element to the top of stack
+<br/>
+## T pop()
+``` java
+    public T pop(){
+        isEmptyThrowException();
+        return (T) myLinkedList.remove(0);
+    }
+```
+Return element at the top of stack and remove it
+<br/>
+## T peek()
+``` java
+    public T peek(){
+        isEmptyThrowException();
+        return (T) myLinkedList.get(0);
+    }
+```
+Return element at the top of stack without removing it
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 # $\S1.$ Method size()
 ## ArrayList
 ```java
